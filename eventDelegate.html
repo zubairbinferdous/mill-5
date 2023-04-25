@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delagaet</title>
+</head>
+<body id="">
+
+    <ul id="thislist">
+        <li class="itam">Lorem ipsum dolor sit amet.</li>
+        <li class="itam">Alias quisquam veniam vitae hic!</li>
+        <li class="itam">Totam voluptatem incidunt placeat veritatis.</li>
+        <li class="itam">Nam reiciendis temporibus nostrum veritatis!</li>
+        <li class="itam">Deleniti impedit suscipit eligendi perferendis.</li>
+    </ul>
+
+    <button id="button">add new li </button>
+
+    <script>
+
+
+        document.getElementById('thislist').addEventListener('click' , function (event) {
+            event.target.parentNode.removeChild(event.target);
+            
+        })
+
+        document.getElementById('button').addEventListener('click' , function (event) {
+            const ul = document.getElementById('thislist');
+            const li = document.createElement('li');
+            li.classList.add('itam')
+            li.innerText = 'this is me';
+            ul.appendChild(li);
+            
+        });
+
+        // const itam = document.getElementsByClassName('itam');
+        // for (const li of itam) {
+        //    li.addEventListener('click' , function(event){
+        //     event.target.parentNode.removeChild(event.target);
+        //    })
+        // };
+
+    </script>
+</body>
+</html>

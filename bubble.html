@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble in js</title>
+</head>
+<body id="body">
+    <section id="section">
+        <h1>this is bubble for working </h1>
+        <ul id="list">
+            <li id="itam-1">Lorem, ipsum.</li>
+            <li id="itam-2">Similique, dolores.</li>
+            <li id="itam-3">Facere, provident.</li>
+            <li id="itam-4">Quidem, ea.</li>
+            <li id="itam-5">Ex, totam!</li>
+            <li id="itam-6">Unde, consequuntur?</li>
+        </ul>
+    </section>
+    <SCript>
+        document.getElementById('itam-2').addEventListener('click' , function (event) {
+            console.log(' this is li-2');
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('list').addEventListener('click' , function () {
+            console.log(' this is ul')
+        })
+        document.getElementById('section').addEventListener('click' , function () {
+            console.log(' this is section')
+        })
+        document.getElementById('body').addEventListener('click' , function () {
+            console.log(' this is body')
+        })
+    </SCript>
+</body>
+</html>
